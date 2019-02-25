@@ -1,71 +1,215 @@
+/* 
+Formatting 
+
+background: #29313E;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: #FBE6C0;
+
+background: #2F5567;
+background: #FFCB3F;
+
+background: #FBE6C0;
+*/
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
-    background: #29313E;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #FBE6C0;
+  margin: 40px;
+  background: #29313E;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #FBE6C0;
+}
+
+header,
+footer {
+  background: #FBE6C0;
+  color: #000000;
+}
+
+aside {
+  background: #FFCB3F;
+  color: #000000;
 }
 
 article {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 30vw 20vw;
-    grid-gap: 1em;
-  }
-  
-  main {
-    grid-column: 1 / span 3;
-  }
-  
-  aside {
-    grid-column: span 2;
-  }
+  background: #2F5567;
+  color: #FBE6C0;
+}
 
-  section {
-    grid-column: 1 / span 5;
-  }
-  
-  @media (max-width: 700px) {
-    
-    main,
-    aside {
-      grid-column: 1 / span 5;
-    }
-    
-  }
-  
-  /* Demo Specific Styles */
-  article {
-    margin: 0 auto;
-    max-width: 56em;
-    padding: 1em;
-  }
-  
-  main,
-  aside,
-  section {
-    background: #2F5567;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-  }
-  
-  header,
-  footer {
-    background: #FBE6C0;
-    align-items: center;
-    justify-content: center;
-    height: 2.5vw;
-    display: flex;
-    color: #000000;
-  }
+h1 {
+  margin: 0 0 0 0;
+}
 
-  aside {
-    background: #FFCB3F;
-    color: #000000;
-  }
+h2, p {
+  margin: 0 0 1em 0;
+}
 
-  section {
-    height: 20vw;
-    background: #FFCB3F;
-    color: #000000;
+.sidebar {
+  float: left;
+  width: 19.1489%;
+}
+
+.content {
+  float: right;
+  width: 79.7872%;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+}
+
+.wrapper > * {
+  border-radius: 5px;
+  padding: 20px;
+  /* font-size: 150%; */
+  margin-bottom: 10px;
+}
+
+.header, .footer {
+  grid-column: 1 / -1;
+  clear: both;
+}
+
+
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
   }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.img-container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height:400px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.big-img {
+  width:100%;
+  height:400px;
+  border-radius:15px 15px 0px 0px;
+  border-color:#000000;
+  border-style:solid;
+  border-width:1px;
+}
+
+
+/* Next & previous buttons */
+.prj-lnk,
+.prj-src {
+  cursor: pointer;
+  position: absolute;
+  top: 75%;
+  width: 50%;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.prj-src {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  text-align: right;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prj-lnk:hover,
+.prj-src:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
